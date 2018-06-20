@@ -1,0 +1,52 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.0.0",
+    "@material-ui/icons": "^1.0.0",
+    "axios": "^0.18.0",
+    "combine-reducers-enhanced": "0.0.5",
+    "date-fns": "^2.0.0-alpha.7",
+    "downshift": "^1.28.0",
+    "material-ui-pickers": "^1.0.0-rc.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-load-script": "0.0.6",
+    "react-number-format": "^3.1.5",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "recharts": "^1.0.0-beta.10",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build-app": "copy /Y src\\app.js src\\index.js && react-scripts build && MOVE /Y .\\build\\index.html ..\\backend\\templates\\index.html && XCOPY /SY .\\build ..\\backend\\public && del ..\\backend\\public\\service-worker.js",
+    "build-login": "copy /Y src\\login.js src\\index.js && react-scripts build && MOVE /Y .\\build\\index.html ..\\backend\\templates\\login.html && XCOPY /SY .\\build ..\\backend\\public && copy /Y src\\app.js src\\index.js && del ..\\backend\\public\\service-worker.js",
+    "windows-build": "react-scripts build && MOVE /Y .\\build\\index.html ..\\backend\\templates\\index.html && XCOPY /SY .\\build ..\\backend\\public && del ..\\backend\\public\\service-worker.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "cosmos": "cosmos",
+    "cosmos:export": "cosmos-export"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-cosmos": "^4.5.0",
+    "react-cosmos-redux-proxy": "^4.4.0",
+    "react-cosmos-router-proxy": "^4.5.0",
+    "react-cosmos-test": "^4.5.0",
+    "react-cosmos-wrapper-proxy": "^1.4.0",
+    "react-cosmos-xhr-proxy": "^4.5.0",
+    "react-test-renderer": "^16.4.0",
+    "redux-devtools": "^3.4.1",
+    "why-did-you-update": "^0.1.1"
+  }
+}
